@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+
+        <div class="card">
+            <h2>Add Course</h2>
+            <form id="addCourseForm">
+                <input type="text" id="courseName" placeholder="Course Name" required>
+                <input type="text" id="courseDepartment" placeholder="Department" required>
+                <input type="text" id="courseLevel" placeholder="Level" required>
+                <input type="text" id="courseTime" placeholder="Time (e.g., Morning)" required>
+                <input type="text" id="courseDay" placeholder="Day (e.g., Monday)" required>
+                <input type="number" id="courseSeats" placeholder="Seats" required>
+                <input type="text" id="coursePrerequisites" placeholder="Prerequisites (comma-separated)">
+                <button type="submit">Add Course</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Manage Courses</h2>
+            <table id="manageCourseTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Level</th>
+                        <th>Time</th>
+                        <th>Day</th>
+                        <th>Seats</th>
+                        <th>Prerequisites</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Manage Student Registrations</h2>
+            <table id="studentRegistrationsTable">
+                <thead>
+                    <tr>
+                        <th>Roll Number</th>
+                        <th>Course Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Reports</h2>
+            <button onclick="generateReport('students')">List of Students per Course</button>
+            <button onclick="generateReport('available-seats')">Courses with Available Seats</button>
+            <div id="reportOutput"></div>
+        </div>
+
+        <div class="card">
+            <h2>Override Registration</h2>
+            <form id="overrideForm">
+                <input type="text" id="overrideRollNumber" placeholder="Student Roll Number" required>
+                <input type="text" id="overrideCourseName" placeholder="Course Name" required>
+                <button type="submit">Override</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

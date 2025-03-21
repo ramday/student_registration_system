@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1a2526;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 3px solid #ffd700;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.card {
+    background-color: #263238;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #37474f;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #ffd700;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #455a64;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #37474f;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+button {
+    background-color: #ffd700;
+    color: #1a2526;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffca28;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+button.subscribe-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button.subscribe-btn:hover {
+    background-color: #43a047;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #455a64;
+}
+
+th {
+    background-color: #2c3e50;
+    color: #ffd700;
+    font-weight: 500;
+}
+
+tr {
+    background-color: #263238;
+}
+
+tr:hover {
+    background-color: #37474f;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#calendar div {
+    padding: 15px;
+    background-color: #37474f;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #455a64;
+}
+
+#calendar div.conflict {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.error-message {
+    color: #ef5350;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
